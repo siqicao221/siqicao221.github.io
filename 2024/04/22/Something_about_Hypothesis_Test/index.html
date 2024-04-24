@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#F48500" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#F48500" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/fav.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/fa.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#F48500">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/yellow/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.18.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#F48500","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="There are two final exams coming and I just finished my final project for one course. It&#39;s sooooo easy for me to lose passion while studying just for preparing for the exams.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Something about Hypothesis Test">
+<meta property="og:url" content="http://example.com/2024/04/22/Something_about_Hypothesis_Test/index.html">
+<meta property="og:site_name" content="Siqi Cao">
+<meta property="og:description" content="There are two final exams coming and I just finished my final project for one course. It&#39;s sooooo easy for me to lose passion while studying just for preparing for the exams.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-04-23T01:55:15.000Z">
+<meta property="article:modified_time" content="2024-04-24T18:22:43.207Z">
+<meta property="article:author" content="Siqi Cao">
+<meta property="article:tag" content="Theory">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2024/04/22/Something_about_Hypothesis_Test/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2024/04/22/Something_about_Hypothesis_Test/","path":"2024/04/22/Something_about_Hypothesis_Test/","title":"Something about Hypothesis Test"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Something about Hypothesis Test | Siqi Cao</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Siqi Cao</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-papers"><a href="/papers/" rel="section"><i class="fa fa-scroll fa-fw"></i>Papers</a></li><li class="menu-item menu-item-teaching"><a href="/teaching/" rel="section"><i class="fa fa-person-chalkboard fa-fw"></i>Teaching</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">3</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">2</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">3</span></a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hypothesis-test"><span class="nav-number">1.</span> <span class="nav-text">Hypothesis test</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction"><span class="nav-number">1.1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#how-to-make-a-good-decision-when-testing"><span class="nav-number">1.2.</span> <span class="nav-text">How to make a good
+decision when testing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#uniformly-most-powerful-test"><span class="nav-number">1.3.</span> <span class="nav-text">Uniformly most powerful test</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#simple-v.s.-simple-test"><span class="nav-number">1.3.1.</span> <span class="nav-text">Simple v.s. Simple test</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#simple-v.s.-one-sided-test-or-one-sided-v.s.-one-sided-test"><span class="nav-number">1.3.2.</span> <span class="nav-text">Simple
+v.s. One-sided test or One-sided v.s. One-sided test</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#two-sided-test"><span class="nav-number">1.3.3.</span> <span class="nav-text">Two-sided test</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#confidence-set"><span class="nav-number">2.</span> <span class="nav-text">Confidence set</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#how-to-find-a-confidence-set"><span class="nav-number">2.1.</span> <span class="nav-text">How to find a confidence set</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pivotal-quantity"><span class="nav-number">2.1.1.</span> <span class="nav-text">Pivotal quantity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inverting-a-test-statistic"><span class="nav-number">2.1.2.</span> <span class="nav-text">Inverting a test statistic</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#duality-between-hypothesis-test-and-confidence-set"><span class="nav-number">3.</span> <span class="nav-text">Duality
+between hypothesis test and confidence set</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#acknowledgement"><span class="nav-number">4.</span> <span class="nav-text">Acknowledgement</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Siqi Cao"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Siqi Cao</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:scao7@ncsu.edu" title="E-Mail → mailto:scao7@ncsu.edu" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/siqicao221" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;siqicao221" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/siqicao221/" title="Linkedin → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;siqicao221&#x2F;" rel="noopener me" target="_blank"><i class="fab fa-linkedin fa-fw"></i>Linkedin</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/22/Something_about_Hypothesis_Test/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Siqi Cao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Siqi Cao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Something about Hypothesis Test | Siqi Cao">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Something about Hypothesis Test
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-04-22 21:55:15" itemprop="dateCreated datePublished" datetime="2024-04-22T21:55:15-04:00">2024-04-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-04-24 14:22:43" itemprop="dateModified" datetime="2024-04-24T14:22:43-04:00">2024-04-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Note/" itemprop="url" rel="index"><span itemprop="name">Note</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>There are two final exams coming and I just finished my final project
+for one course. It's sooooo easy for me to lose passion while studying
+just for preparing for the exams. <span id="more"></span>So I plan to write
+something just to cheer myself up. In August, I still need to take a
+qualify exam, I don't want to get kicked out the Statistics Department
+of NCSU. Even if I don't want to prepare for qualify, it's not the time
+to be miserable yet. I will write something for future review of qualify
+(and present review of ST702 final). I'll update the articles if I have
+any new idea, maybe.</p>
+<p>This note is based on the textbook of ST 701 and ST 702, i.e.
+<em>Statistical Inference</em> written by Casella Berger, and the my
+notes of ST 702 taught by <a
+target="_blank" rel="noopener" href="https://www4.stat.ncsu.edu/~rmartin/index.html">Dr. Ryan
+Martin</a>.</p>
+<p>Let's get start with the definition of hypothesis test. (Actually it
+took me one hour to successfully insert math equations into my blog
+before I started ^_^|||)</p>
+<h1 id="hypothesis-test">Hypothesis test</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Instead of the basic three options of hypothesis test, i.e. <span
+class="math display">\[H_0:\theta\geq\theta_0\quad v.s.\quad
+H_1:\theta&lt;\theta_0\]</span> <span
+class="math display">\[H_0:\theta\leq\theta_0\quad v.s.\quad
+H_1:\theta&gt;\theta_0\]</span> <span
+class="math display">\[H_0:\theta=\theta_0\quad v.s.\quad
+H_1:\theta\neq\theta_0\]</span></p>
+<p>Let's try to write the hypothesis test in a more general way: <span
+class="math display">\[H_0:\theta\in\Theta_0\quad v.s.\quad
+H_1:\theta\in\Theta_0^c\]</span></p>
+<p>In fact, <span class="math inline">\(H_0\)</span> and <span
+class="math inline">\(H_1\)</span> doesn't need to be complementary. For
+instance, <span class="math inline">\(H_0:\theta\geq\theta_0\quad
+v.s.\quad H_1:\theta&lt;\theta_0\)</span> is actually equivalent to
+<span class="math inline">\(H_0:\theta=\theta_0\quad v.s.\quad
+H_1:\theta&lt;\theta_0\)</span>. Therefore, we can write the hypothesis
+more generally: <span class="math display">\[H_0:\theta\in\Theta_0\quad
+v.s.\quad H_1:\theta\in\Theta_1\]</span> where <span
+class="math inline">\(\Theta_0\cap\Theta_1=\varnothing\)</span></p>
+<p>The hypothesis testing procedure is to find a function mapping from
+the sample space <span class="math inline">\(\mathbb X^n\)</span> to set
+<span class="math inline">\(\{0, 1\}\)</span>, i.e. <span
+class="math display">\[\delta(X^n)=1\Leftrightarrow\text{reject
+}H_0\quad\text{and}\quad\delta(X^n)=0\Leftrightarrow\text{don&#39;t  reject
+}H_0\]</span> where <span
+class="math inline">\(X^n=(X_1,...,X_n)&#39;\)</span>, i.e. the sample
+we obtain.</p>
+<p><span class="math inline">\(\delta(X^n)\)</span> represents the
+decision about rejecting <span class="math inline">\(H_0\)</span> or not
+based on the sample we got.</p>
+<h2 id="how-to-make-a-good-decision-when-testing">How to make a good
+decision when testing</h2>
+<p>Doing hypothesis testing is just like making a decision. The decision
+is that we choose to reject or not reject <span
+class="math inline">\(H_0\)</span>. To measure whether our decision is
+good or not, we need to define some measurement to quatify that.
+According to decision theory, we can take the value of <span
+class="math inline">\(\delta(X^n)\)</span> as our action and one way of
+defining the risk function <span class="math inline">\(R(\theta,
+\delta)\)</span> of a hypothesis test is that <span
+class="math display">\[
+R(\theta,\delta)=\left\{
+\begin{array}
+PP_\theta(\delta(X^n)=1),\quad \theta\in\Theta_0\\
+P_\theta(\delta(X^n)=0),\quad \theta\notin\Theta_0
+\end{array}\right.
+\]</span> It's easy to see that minimizing risk function is equivalent
+to trying best to avoid make a wrong decision.</p>
+<p>However, no <span class="math inline">\(\delta(X^n)\)</span> can
+minimize <span class="math inline">\(R(\theta, \delta)\)</span>
+uniformly on <span class="math inline">\(\theta\)</span> so that we need
+to make a constraint. Before it, let's introduce the definition of power
+and size.</p>
+<p><strong>Definition 1</strong> <em>(power function)</em> The <em>power
+function</em> of a hypothesis test with rejection region <span
+class="math inline">\(R\)</span> is the function of <span
+class="math inline">\(\theta\)</span> defined by <span
+class="math inline">\(\beta(\theta)=P_\theta(X^n\in R)\)</span>. When
+<span class="math inline">\(\theta\notin\Theta_0\)</span>, <span
+class="math inline">\(1-\beta(\theta)\)</span> is also known as the Type
+II error.</p>
+<p><strong>Definition 2</strong> <em>(size)</em> The <em>size</em> of a
+hypothesis test is <span class="math inline">\(\alpha\)</span> if <span
+class="math inline">\(\sup_{\theta\in\Theta_0}\beta(\theta)=\alpha\)</span>.
+The size of a test is also known as the Type I error.</p>
+<p>It's common to control the Type I error at a specific level. Under
+this control, a test with a smaller Type II error, i.e. larger power
+will definitely be better.</p>
+<h2 id="uniformly-most-powerful-test">Uniformly most powerful test</h2>
+<p>Then, we're wondering if there exists a best test, i.e. the test with
+the maximum power when its Type I error is controled. But we need to
+define "the best test" first, <strong>Definition 3</strong>
+<em>(Uniformly most powerful)</em> Let <span
+class="math inline">\(C\)</span> be the class of size <span
+class="math inline">\(\alpha\)</span> test. Then a <em>uniformly most
+powerful</em> (UMP) test <span
+class="math inline">\(\delta^*_\alpha\)</span> is s.t. <span
+class="math inline">\(\beta_{\delta^*_\alpha}(\theta)\geq\beta_{\delta_\alpha}(\theta)\)</span>
+for <span class="math inline">\(\forall\delta_\alpha\in C\)</span>,
+<span class="math inline">\(\forall\theta\in\Theta_1\)</span>.</p>
+<p>It's hard to find a UMP test only through its definition. Luckily,
+there is some special cases where we have some theorems about the UMP
+test.</p>
+<h3 id="simple-v.s.-simple-test">Simple v.s. Simple test</h3>
+<p>Simple v.s. Simple test is the test with both <span
+class="math inline">\(\Theta_0\)</span> and <span
+class="math inline">\(\Theta_1\)</span> point sets. That is, <span
+class="math display">\[H_0:\theta=\theta_0\quad v.s.\quad
+H_1:\theta=\theta_1\]</span></p>
+<p><strong>Theorem 1 (Neyman-Pearson Lemma)</strong> Consider test <span
+class="math inline">\(H_0:\theta=\theta_0\quad v.s.\quad
+H_1:\theta=\theta_1\)</span>, then the likelihood ratio test (LRT) is a
+unique UMP size <span class="math inline">\(\alpha\)</span> test: <span
+class="math display">\[\delta_\alpha^*(X_n)=\mathbb1\{\frac{L_n(\theta_1)}{L_n(\theta_0)}&gt;k_\alpha\}\]</span>
+where <span class="math inline">\(k_\alpha\)</span> is s.t. <span
+class="math inline">\(P_{\theta_0}(\frac{L_n(\theta_1)}{L_n(\theta_0)}&gt;k_\alpha)=\alpha\)</span>,
+<span class="math inline">\(L_n(\theta)\)</span> is the likelihood
+function.</p>
+<h3
+id="simple-v.s.-one-sided-test-or-one-sided-v.s.-one-sided-test">Simple
+v.s. One-sided test or One-sided v.s. One-sided test</h3>
+<p>When our test isn't a Simple v.s. Simple test but a test with the
+form like <span class="math display">\[H_0:\theta=\theta_0\quad
+v.s.\quad H_1:\theta&gt;\theta_1\]</span> or <span
+class="math display">\[H_0:\theta\leq\theta_0\quad v.s.\quad
+H_1:\theta&gt;\theta_1\]</span> Will the UMP test exist under certain
+condition? What does it look like? The answer for the first question is
+yes and one condition is called <em>monotone likelihood ratio</em>
+(MLR). And Karlin-Rubin theorem will help us answer the second
+question.</p>
+<p><strong>Definition 4</strong> <em>(Monotone likelihood ratio)</em> A
+family of pdfs or pmfs has the MLR property w.r.t. statistic <span
+class="math inline">\(T=T(X^n)\)</span> if the marginal pdf of <span
+class="math inline">\(T\)</span>, i.e. <span
+class="math inline">\(\{g(t|\theta):\theta\in\Theta\}\)</span>,
+satisfies for every <span
+class="math inline">\(\theta_2&gt;\theta_1\)</span>, <span
+class="math inline">\(g(t|\theta_2)/g(t|\theta_1)\)</span> is a monotone
+(nonincreasing or nondecreasing) function of <span
+class="math inline">\(t\)</span>.</p>
+<p>Actually, any regular exponential family with <span
+class="math inline">\(g(t|\theta)=h(t)c(\theta)e^{w(\theta)t}\)</span>
+has an MLR if <span class="math inline">\(w(\theta)\)</span> is a
+nondecreasing function.</p>
+<p><strong>Theorem 2 (Karlin-Rubin)</strong> Consider testing <span
+class="math inline">\(H_0:\theta\leq(\text{or }=)\theta_0\quad v.s.\quad
+H_1:\theta&gt;\theta_1\)</span>. Suppose <span
+class="math inline">\(T\)</span> is a sufficient statistic for <span
+class="math inline">\(\theta\)</span> and the family of pdfs or pmfs of
+<span class="math inline">\(T\)</span> has an MLR. Then for any <span
+class="math inline">\(t_0\)</span>, the test that rejects <span
+class="math inline">\(H_0\)</span> if and only if <span
+class="math inline">\(T&gt;t_0\)</span> is a UMP size <span
+class="math inline">\(\alpha\)</span> test, where <span
+class="math inline">\(\alpha=P_{\theta_0}(T&gt;t_0)\)</span>.</p>
+<h3 id="two-sided-test">Two-sided test</h3>
+<p>The two-sided test is the test with form like <span
+class="math display">\[H_0:\theta=\theta_0\quad v.s.\quad
+H_1:\theta\neq\theta_1\]</span></p>
+<p>However, for two-sided test, no UMP test exists.</p>
+<h1 id="confidence-set">Confidence set</h1>
+<p>Before the introduction of confidence set, let's introduce the
+definition of <em>set estimator</em> first. <strong>Definition
+5</strong> <em>(Set estimator)</em> If <span
+class="math inline">\(\phi=\phi(\theta)\)</span> is a relevant feature
+of <span class="math inline">\(\theta\in\Theta\)</span>, then a set
+estimator for <span class="math inline">\(\phi\)</span> is a function
+<span class="math inline">\(C\)</span> that maps data set <span
+class="math inline">\(x^n\)</span> to the subset of <span
+class="math inline">\(\phi(\Theta)\)</span>.</p>
+<p>Confidence set is a set estimator. Confidence set isn't always
+confidence interval because sometimes confidence estimaor <span
+class="math inline">\(C(x^n)\)</span> isn't an interval. That is,
+confidence set is a more general terminology than confidence
+interval.</p>
+<p>A specific confidence set is closely related to the confidence level
+we want.</p>
+<p><strong>Definition 6</strong> <em>(Confidence level)</em> The
+<em>confidence level</em> of a set estimator <span
+class="math inline">\(C(x^n)\)</span> for <span
+class="math inline">\(\phi(\theta)\)</span> is <span
+class="math display">\[\inf_{\theta\in\Theta}P_\theta\{C(X^n)\ni\phi(\theta)\}\]</span>
+For a given <span class="math inline">\(\alpha\in[0,1]\)</span>, a set
+estimator <span class="math inline">\(C=C_\alpha\)</span> is called a
+<span class="math inline">\(100(1-\alpha)\%\)</span> confidence set for
+<span class="math inline">\(\phi(\theta)\)</span> if its confidence
+level is <span class="math inline">\(\alpha\)</span>.</p>
+<h2 id="how-to-find-a-confidence-set">How to find a confidence set</h2>
+<h3 id="pivotal-quantity">Pivotal quantity</h3>
+<p>Pivotal quantity can help us construct a confidence set. The pivotal
+quantitiy is</p>
+<p><strong>Definition 7</strong> <em>(Pivot)</em> A random variables
+<span class="math inline">\(Q(X^n,\theta)=Q(X_1,...,X_n,\theta)\)</span>
+is a <em>pivotal quantity</em> (or <em>pivot</em>) if the distribution
+of <span class="math inline">\(Q(X^n,\theta)\)</span> is independent of
+parameters <span class="math inline">\(\theta\)</span>.</p>
+<h3 id="inverting-a-test-statistic">Inverting a test statistic</h3>
+<p>Constructing confidence sets for a parameter <span
+class="math inline">\(\theta\)</span> is equivalent to the hypothesis
+test for <span class="math inline">\(\theta\)</span>. The hypothesis
+test here doesn't need to be <span
+class="math inline">\(H_0:\theta=0\)</span>. In short, considering test
+<span class="math inline">\(H_0:\theta\in\Theta_0\)</span>, if the
+intersection between the confidence set <span
+class="math inline">\(C_\alpha\)</span> for <span
+class="math inline">\(\theta\)</span> and <span
+class="math inline">\(\Theta_0\)</span> is <span
+class="math inline">\(\varnothing\)</span>, we can reject <span
+class="math inline">\(H_0\)</span> at level <span
+class="math inline">\(\alpha\)</span>. I'll introduce this duality
+between further later.</p>
+<h1 id="duality-between-hypothesis-test-and-confidence-set">Duality
+between hypothesis test and confidence set</h1>
+<p>Assume <span class="math inline">\(C_\alpha\)</span> is a <span
+class="math inline">\((1-\alpha)\)</span> level confidence set for <span
+class="math inline">\(\theta\)</span>. It's similar when we interested
+in <span class="math inline">\(\phi(\theta)\)</span>. For simplicity, we
+just assume <span class="math display">\[P_\theta(\theta\in
+C_\alpha)=1-\alpha\]</span> Then we can reject <span
+class="math inline">\(H_0:\theta=c\)</span> if <span
+class="math inline">\(c\notin C_\alpha\)</span>. This makes sense
+because if the null hypothesis is true, the Type I error is <span
+class="math inline">\(\alpha\)</span> due to <span
+class="math inline">\(P_\theta(\theta\notin
+C_\alpha)=\alpha\)</span>.</p>
+<p>Now consider null hypothesis <span
+class="math inline">\(H_0:\theta=c\)</span> where <span
+class="math inline">\(c\)</span> can be different values. Then the
+values of <span class="math inline">\(c\)</span> that let us fail to
+reject <span class="math inline">\(H_0\)</span> at level <span
+class="math inline">\(\alpha\)</span> form a confidence set of <span
+class="math inline">\(\theta\)</span>:</p>
+<p><span class="math display">\[C_\alpha=\{c:\text{fail to reject
+}H_0\text{ at level }\alpha\}\]</span> This is a confidence set at
+confidence level <span class="math inline">\(\alpha\)</span> because
+<span class="math display">\[P_\theta(\theta\in
+C_\alpha)=P(\text{fail  to reject }H_0\text{ at level
+}\alpha)=1-\alpha\]</span></p>
+<h1 id="acknowledgement">Acknowledgement</h1>
+<p>This note is based on <em>Statistical Inference</em>, 2nd edition
+(Casella, Berger), the notes and the draft book of Dr. Martin for ST
+702.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Theory/" rel="tag"><i class="fa fa-tag"></i> Theory</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/09/23/About_My_Website_Logo_and_Avatar/" rel="prev" title="About My Website Logo and Avatar">
+                  <i class="fa fa-angle-left"></i> About My Website Logo and Avatar
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-worm fa-flip"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Siqi Cao</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
